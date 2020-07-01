@@ -4,11 +4,10 @@ import "./App.css";
 import Navbar from './components/Navbar';
 import Jumbo from './components/Jumbo';
 import Search from "./pages/Search";
-import Favs from "./pages/Favorites"
-import {searchBook} from './utils/API'
+import Favs from "./pages/Favorites";
 
 class App extends Component {
-  
+
   render() {
     return (
       <>

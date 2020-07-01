@@ -3,18 +3,18 @@ const mongoose = require('mongoose');
 
 const db = require('../models');
 
-router.post('/search', (req, res)=> {
+router.post('/books', (req, res)=> {
     console.log(req.body);
     console.log('Just heard a request.');
     db.Book.create(req.body).then(() => res.send('Book saved'));
 });
 
-router.get('/favs', (req, res) => {
+router.get('/books', (req, res) => {
     console.log('get route success');
-    db.Book.find().then(() => res.json());
+    db.Book.find().then((data) => res.json(data));
 });
 
-router.delete('/search/:id', (req, res) => {
+router.delete('/books/:id', (req, res) => {
     db.Book.findByIdAndDelete(_id)
 })
 

@@ -4,11 +4,11 @@ class Book extends React.Component {
   handleSave = (event) => {
     event.preventDefault();
     const { title, authors, description, image, link, _id } = this.props;
-    
+
 
     console.log({ title, authors, description, image, link, _id });
 
-    fetch("/api/search", {
+    fetch("/api/books", {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, authors, description, image, link, _id })
