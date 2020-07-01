@@ -14,7 +14,7 @@ class App extends Component {
       <Router>
          <Navbar/>
          <Jumbo/>
-          <Route exact path="./" component={()=> <Search/>}/>
+          <Route exact path="/" component={()=> <Search/>}/>
           <Route exact path="/favs" component={()=> <Favs/>}/>
       </Router>
       </>
