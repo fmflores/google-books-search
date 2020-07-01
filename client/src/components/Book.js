@@ -16,6 +16,7 @@ class Book extends React.Component {
     }).then(data => {
             console.log('Book saved.');
         })
+        document.getElementById("btn-save").style.visibility = "hidden";
   }
   
   render() {
@@ -30,7 +31,7 @@ class Book extends React.Component {
           <a className="btn btn-primary" href={this.props.link} target="_blank"  rel="noopener noreferrer">
             More Info
           </a>
-          <button type="button" className="btn btn-success" onClick={this.handleSave}>Save Book</button>
+          <button type="button" className="btn btn-success" id="btn-save" onClick={this.handleSave}>Save Book</button>
         </div>
       </div>
     );

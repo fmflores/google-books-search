@@ -18,7 +18,7 @@ class Search extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.search}&key=${process.env.REACT_APP_API_KEY}`)
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.search}`)
             .then(res => res.json())
             .then(data => {
                 this.setState({
